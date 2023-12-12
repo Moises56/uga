@@ -1257,6 +1257,7 @@ section {
   text-align: center;
   font-size: 13px;
   color: #47536e;
+  margin-left: 20%;
 }
 
 @media (max-width: 768px) {
@@ -1266,5 +1267,6 @@ section {
     float: none;
     text-align: center;
     padding: 5px 0;
+    margin-right: 15%;
   }
 }

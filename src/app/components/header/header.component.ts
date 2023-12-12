@@ -25,7 +25,7 @@ export class HeaderComponent {
   @Output() addVisibleEvent = new EventEmitter<boolean>();
 
   visible(){
-    this.accesspoint.onVisible.emit(true);
+    this.accesspoint.onVisible.emit(false);
   }
 
 
