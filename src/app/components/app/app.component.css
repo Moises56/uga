@@ -99,6 +99,8 @@ h6 {
   background: -webkit-linear-gradient(to right, #5ccedf, #f0c752, #a1858c);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #5ccedf, #f0c752, #a1858c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+
+
 }
 
 #header.header-scrolled {
@@ -106,8 +108,8 @@ h6 {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 
   background: #A770EF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #5ccedf, #f0c752, #a1858c);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #5ccedf, #f0c752, #a1858c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #DB473C, #f0c752, #5ccedf);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DB473C, #f0c752, #5ccedf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 

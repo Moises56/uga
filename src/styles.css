@@ -425,7 +425,12 @@ h6 {
 }
 
 #hero .download-btn:hover {
-  background: #5777ba;
+  /* background: #5777ba; */
+  background-color: #005454;
+  background: #5ccedf !important;
+  box-shadow: 0 0 5px #5ccedf, 0 0 25px #5ccedf, 0 0 50px #5ccedf,
+    0 0 200px #5ccedf !important;
+  color: #ffeba7 !important;
 }
 
 #hero .download-btn i {
