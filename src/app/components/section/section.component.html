@@ -1,12 +1,15 @@
-
 <section id="hero" class="d-flex align-items-center">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+      <div
+        class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1"
+        data-aos="fade-up">
         <div>
           <h1>Licencias Ambientales</h1>
-          <h2>¡Bienvenido a nuestro portal de trámite de Licencias Ambientales de la Unidad de Gestión Ambiental (UGA)! Facilitamos el proceso para obtener las licencias que tu proyecto necesita para garantizar un desarrollo sostenible y respetuoso con el medio ambiente.</h2>
-          <a href="#" class="download-btn"><i class="bx bxs-droplet"></i> Crear Solicitud</a>
+          <h2>¡Bienvenido a nuestro portal de trámite de Licencias Ambientales de la Unidad de Gestión Ambiental (UGA)!
+            Facilitamos el proceso para obtener las licencias que tu proyecto necesita para garantizar un desarrollo
+            sostenible y respetuoso con el medio ambiente.</h2>
+          <a class="download-btn" (click)="openXl(content)"><i class="bx bxs-droplet"></i> Crear Solicitud</a>
           <a class="download-btn" [routerLink]="'/login'"><i class="bx bxs-user"></i> Registrate</a>
         </div>
       </div>
@@ -16,59 +19,69 @@
     </div>
   </div>
 
+  <!-- <button class="btn btn-outline-primary mb-2 me-2" (click)="openXl(content)">Extra large modal</button> -->
+
 </section><!-- End Hero -->
 
 
 <main id="main">
-<!-- ======= App Features Section ======= -->
-<section id="features" class="features">
-  <div class="container">
+  <!-- ======= App Features Section ======= -->
+  <section id="features" class="features">
+    <div class="container">
 
-    <div class="section-title">
-      <h2>Licencias Ambientales</h2>
-      <p>En nuestro sitio web, encontrarás una plataforma intuitiva y eficiente que simplifica el proceso de solicitud de licencias ambientales. Ya sea para nuevas construcciones, proyectos de infraestructura o cualquier actividad que pueda afectar el entorno, estamos aquí para guiar y agilizar tu trámite.</p>
-    </div>
+      <div class="section-title">
+        <h2>Licencias Ambientales</h2>
+        <p>En nuestro sitio web, encontrarás una plataforma intuitiva y eficiente que simplifica el proceso de solicitud
+          de licencias ambientales. Ya sea para nuevas construcciones, proyectos de infraestructura o cualquier
+          actividad que pueda afectar el entorno, estamos aquí para guiar y agilizar tu trámite.</p>
+      </div>
 
-    <div class="row no-gutters">
-      <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
-        <div class="content d-flex flex-column justify-content-center">
-          <div class="row">
-            <div class="col-md-6 icon-box" data-aos="fade-up">
-              <i class="bx bx-receipt"></i>
-              <h4>Facilidad de Uso</h4>
-              <p>Nuestra interfaz de usuario ha sido diseñada pensando en ti. Con unos pocos clics, podrás completar tu solicitud de licencia ambiental de manera rápida y sencilla.</p>
-            </div>
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-cube-alt"></i>
-              <h4>Asesoramiento Especializado</h4>
-              <p>Contamos con un equipo de expertos en regulaciones ambientales listos para ayudarte en cada paso del proceso. No estás solo; estamos aquí para responder tus preguntas y garantizar que tu solicitud cumpla con todos los requisitos.</p>
-            </div>
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-images"></i>
-              <h4>Seguimiento en Tiempo Real:</h4>
-              <p>Mantente informado sobre el estado de tu solicitud en todo momento. A través de nuestra plataforma, podrás realizar un seguimiento en tiempo real y recibir notificaciones importantes.</p>
-            </div>
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-shield"></i>
-              <h4>Compromiso Ambiental:</h4>
-              <p>Nos comprometemos a promover prácticas ambientales responsables. Nuestra plataforma respalda proyectos que buscan equilibrar el desarrollo con la conservación del medio ambiente.</p>
+      <div class="row no-gutters">
+        <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
+          <div class="content d-flex flex-column justify-content-center">
+            <div class="row">
+              <div class="col-md-6 icon-box" data-aos="fade-up">
+                <i class="bx bx-receipt"></i>
+                <h4>Facilidad de Uso</h4>
+                <p>Nuestra interfaz de usuario ha sido diseñada pensando en ti. Con unos pocos clics, podrás completar
+                  tu solicitud de licencia ambiental de manera rápida y sencilla.</p>
+              </div>
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <i class="bx bx-cube-alt"></i>
+                <h4>Asesoramiento Especializado</h4>
+                <p>Contamos con un equipo de expertos en regulaciones ambientales listos para ayudarte en cada paso del
+                  proceso. No estás solo; estamos aquí para responder tus preguntas y garantizar que tu solicitud cumpla
+                  con todos los requisitos.</p>
+              </div>
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                <i class="bx bx-images"></i>
+                <h4>Seguimiento en Tiempo Real:</h4>
+                <p>Mantente informado sobre el estado de tu solicitud en todo momento. A través de nuestra plataforma,
+                  podrás realizar un seguimiento en tiempo real y recibir notificaciones importantes.</p>
+              </div>
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                <i class="bx bx-shield"></i>
+                <h4>Compromiso Ambiental:</h4>
+                <p>Nos comprometemos a promover prácticas ambientales responsables. Nuestra plataforma respalda
+                  proyectos que buscan equilibrar el desarrollo con la conservación del medio ambiente.</p>
+              </div>
             </div>
           </div>
         </div>
+        <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2"
+          data-aos="fade-left" data-aos-delay="100">
+          <img src="./assets/img/features.svg" class="img-fluid" alt="">
+        </div>
       </div>
-      <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-        <img src="./assets/img/features.svg" class="img-fluid" alt="">
-      </div>
+
     </div>
+  </section><!-- End App Features Section -->
 
-  </div>
-</section><!-- End App Features Section -->
+  <!-- ======= Details Section ======= -->
+  <section id="details" class="details">
+    <div class="container">
 
-<!-- ======= Details Section ======= -->
-<section id="details" class="details">
-  <div class="container">
-
-    <!-- <div class="row content">
+      <!-- <div class="row content">
       <div class="col-md-4" data-aos="fade-right">
         <img src="././assets/img/details-1.png" class="img-fluid" alt="">
       </div>
@@ -90,7 +103,7 @@
       </div>
     </div> -->
 
-    <!-- <div class="row content">
+      <!-- <div class="row content">
       <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
         <img src="././assets/img/details-2.png" class="img-fluid" alt="">
       </div>
@@ -111,7 +124,7 @@
       </div>
     </div> -->
 
-    <!-- <div class="row content">
+      <!-- <div class="row content">
       <div class="col-md-4" data-aos="fade-right">
         <img src="./assets/img/details-3.png" class="img-fluid" alt="">
       </div>
@@ -132,7 +145,7 @@
       </div>
     </div> -->
 
-    <!-- <div class="row content">
+      <!-- <div class="row content">
       <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
         <img src="./assets/img/details-4.png" class="img-fluid" alt="">
       </div>
@@ -154,11 +167,11 @@
       </div>
     </div> -->
 
-  </div>
-</section><!-- End Details Section -->
+    </div>
+  </section><!-- End Details Section -->
 
-<!-- ======= Gallery Section ======= -->
-<!-- <section id="gallery" class="gallery">
+  <!-- ======= Gallery Section ======= -->
+  <!-- <section id="gallery" class="gallery">
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
@@ -189,10 +202,10 @@
 
   </div>
 </section> -->
-<!-- End Gallery Section -->
+  <!-- End Gallery Section -->
 
-<!-- ======= Testimonials Section ======= -->
-<!-- <section id="testimonials" class="testimonials section-bg">
+  <!-- ======= Testimonials Section ======= -->
+  <!-- <section id="testimonials" class="testimonials section-bg">
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
@@ -274,10 +287,10 @@
 
   </div>
 </section> -->
-<!-- End Testimonials Section -->
+  <!-- End Testimonials Section -->
 
-<!-- ======= Pricing Section ======= -->
-<!-- <section id="pricing" class="pricing">
+  <!-- ======= Pricing Section ======= -->
+  <!-- <section id="pricing" class="pricing">
   <div class="container">
 
     <div class="section-title">
@@ -330,10 +343,10 @@
 
   </div>
 </section> -->
-<!-- End Pricing Section -->
+  <!-- End Pricing Section -->
 
-<!-- ======= Frequently Asked Questions Section ======= -->
-<!-- <section id="faq" class="faq section-bg">
+  <!-- ======= Frequently Asked Questions Section ======= -->
+  <!-- <section id="faq" class="faq section-bg">
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
@@ -394,70 +407,114 @@
 
   </div>
 </section> -->
-<!-- End Frequently Asked Questions Section -->
+  <!-- End Frequently Asked Questions Section -->
 
-<!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
-  <div class="container" data-aos="fade-up">
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
 
-    <div class="section-title">
-      <h2>Contact</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+          in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-6 info">
+              <i class="bx bx-map"></i>
+              <h4>Address</h4>
+              <p>A108 Adam Street,<br>New York, NY 535022</p>
+            </div>
+            <div class="col-lg-6 info">
+              <i class="bx bx-phone"></i>
+              <h4>Call Us</h4>
+              <p>+1 5589 55488 55<br>+1 5589 22548 64</p>
+            </div>
+            <div class="col-lg-6 info">
+              <i class="bx bx-envelope"></i>
+              <h4>Email Us</h4>
+              <p>contactexample.com<br>infoexample.com</p>
+            </div>
+            <div class="col-lg-6 info">
+              <i class="bx bx-time-five"></i>
+              <h4>Working Hours</h4>
+              <p>Mon - Fri: 9AM to 5PM<br>Sunday: 9AM to 1PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-up">
+            <div class="form-group">
+              <input placeholder="Your Name" type="text" name="name" class="form-control" id="name" required>
+            </div>
+            <div class="form-group mt-3">
+              <input placeholder="Your Email" type="email" class="form-control" name="email" id="email" required>
+            </div>
+            <div class="form-group mt-3">
+              <input placeholder="Subject" type="text" class="form-control" name="subject" id="subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea placeholder="Message" class="form-control" name="message" rows="5" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+
     </div>
+  </section><!-- End Contact Section -->
 
-    <div class="row">
+</main><!-- End #main -->
 
-      <div class="col-lg-6">
-        <div class="row">
-          <div class="col-lg-6 info">
-            <i class="bx bx-map"></i>
-            <h4>Address</h4>
-            <p>A108 Adam Street,<br>New York, NY 535022</p>
-          </div>
-          <div class="col-lg-6 info">
-            <i class="bx bx-phone"></i>
-            <h4>Call Us</h4>
-            <p>+1 5589 55488 55<br>+1 5589 22548 64</p>
-          </div>
-          <div class="col-lg-6 info">
-            <i class="bx bx-envelope"></i>
-            <h4>Email Us</h4>
-            <p>contactexample.com<br>infoexample.com</p>
-          </div>
-          <div class="col-lg-6 info">
-            <i class="bx bx-time-five"></i>
-            <h4>Working Hours</h4>
-            <p>Mon - Fri: 9AM to 5PM<br>Sunday: 9AM to 1PM</p>
+
+
+<!-- modal -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+
+  <div class="modal-body">
+    <!-- <p>One fine body&hellip;</p> -->
+    <div class="container">
+      <div class="row">
+        <!-- 1 -->
+        <div class="col">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                      placeholder="name@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="col-lg-6">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-up">
-          <div class="form-group">
-            <input placeholder="Your Name" type="text" name="name" class="form-control" id="name" required>
-          </div>
-          <div class="form-group mt-3">
-            <input placeholder="Your Email" type="email" class="form-control" name="email" id="email" required>
-          </div>
-          <div class="form-group mt-3">
-            <input placeholder="Subject" type="text" class="form-control" name="subject" id="subject" required>
-          </div>
-          <div class="form-group mt-3">
-            <textarea placeholder="Message" class="form-control" name="message" rows="5" required></textarea>
-          </div>
-          <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
-      </div>
-
     </div>
-
   </div>
-</section><!-- End Contact Section -->
 
-</main><!-- End #main -->
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

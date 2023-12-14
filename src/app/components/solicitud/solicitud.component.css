@@ -1,0 +1,35 @@
+*{
+  margin-top: 3%;
+  padding: 0;
+  box-sizing: border-box;
+  margin-left: 1%;
+}
+
+/* para pantallas moviles */
+@media (max-width: 768px) {
+  *{
+    margin-top: 7%;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 4%;
+  }
+  .contenedor{
+    margin-top: 15%;
+    margin-left: 4px;
+  }
+
+}
+
+/* pantallas de tablet  */
+@media (min-width: 768px) and (max-width: 1024px) {
+  *{
+    margin-top: 7%;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 4%;
+  }
+  .contenedor{
+    margin-top: 15%;
+    margin-left: 4px;
+  }
+}

@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Teleóno</th>
+      <th scope="col">Correo</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of users; track user.name; let i = $index) {
+      <tr>
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          <img
+            [src]="'https://upload.wikimedia.org/wikipedia/commons/' + user.flag"
+            [alt]="'The flag of ' + user.name"
+            class="me-2"
+            style="width: 20px"
+          />
+          {{ user.name }}
+        </td>
+        <td>{{ user.area | number }}</td>
+        <td>{{ user.population | number }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

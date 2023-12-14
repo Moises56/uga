@@ -20,10 +20,10 @@
              </li>
 
             <li>
-                <a href="#" onclick="msjRecibidos()">
+                <a Class="cursor-acti" (click)="mostrar()">
                     <!-- <i class='bx bx-chat' ></i> -->
                     <i class="bx bx-user"></i>
-                    <span  class="links-name">Usuarios</span>
+                    <span  class="links-name " >Usuarios</span>
                 </a>
                 <span class="tooltip">Usuarios</span>
             </li>
@@ -52,8 +52,8 @@
             </li>
             <li>
                 <a href="#" onclick="msjPapelera()">
-                    <!-- <i class='bx bx-trash'></i> -->
-                    <i class="far fa-trash-alt"></i>
+                    <i class='bx bx-trash'></i>
+                    <!-- <i class="far fa-trash-alt"></i> -->
                     <span class="links-name">Papelera</span>
                 </a>
                 <span class="tooltip">Papelera</span>
@@ -64,7 +64,7 @@
                 <div class="profile-details">
                     <img src="/img/profile.jpeg" alt="">
                     <div class="name-job">
-                        <div class="name">Swam Jewel</div>
+                        <div class="name">Mou Grind</div>
                         <div class="job">Web Designer</div>
                     </div>
                 </div>
@@ -73,34 +73,25 @@
         </div>
 </div>
 
-    <div class="home-content pt-5">
+    <div class="home-content pt-5 mr-2">
       <!-- <div class="text">Home Content</div> -->
 
         <!-- <h1>A un minuto de ti</h1> -->
           <div class="contenedor">
-              <table class="tabla">
-                  <thead>
-                      <tr>
-                          <th>Nombre</th>
-                          <th>Mensaje</th>
-                          <th>Hora</th>
-                      </tr>
-                  </thead>
-                  <tbody id="msj-recibidos">
-                      <!-- <tr > -->
-                          <!-- <td data-label="consola" class="nombres">
-                              <i class="far fa-star"></i>
-                              <i class="fas fa-exclamation-triangle"></i>
-                              Juan Perez
-                          </td>
-                          <td data-label="precio">Tarea Primer Parcial-Lorem ipsum dolor sit amet.</td>
-                          <td data-label="fechas" class="hora">10:00 am
-                              <i class="far fa-trash-alt"></i>
-                          </td> -->
-                      <!-- </tr> -->
-                  </tbody>
 
-              </table>
+            <!-- <p>Table is just a mapping of objects to table rows with <code>&#64;for</code></p> -->
+
+            <div [ngClass]="{'visible':regionVisible == 'user', 'no-visible':regionVisible != 'user'}">
+              <div>
+                <app-user></app-user>
+              </div>
+            </div>
+
+
+
+
+
+
           </div>
 
 
