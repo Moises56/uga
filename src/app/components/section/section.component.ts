@@ -16,7 +16,7 @@ export class SectionComponent implements OnInit {
   constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+   // throw new Error('Method not implemented.');
   }
 
   openXl(content: TemplateRef<any>) {
