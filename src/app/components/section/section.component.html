@@ -482,7 +482,7 @@
 <!-- modal -->
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title">Modal title</h4>
+    <h4 class="modal-title">Crear Solicitud</h4>
     <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
   </div>
 
@@ -491,25 +491,143 @@
     <div class="container">
       <div class="row">
         <!-- 1 -->
-        <div class="col">
+        <div class="col-6">
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
+
               <div class="col-md-8">
                 <div class="card-body">
+
                   <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <label for="exampleFormControlInput1" class="form-label">1. Nombre Apoderado Legal</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Apoderado">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">2. Número de Identidad</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Identidad">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">3. Nombre Solicitante</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Solicitante">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">4. Nombre Proyecto</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Proyecto">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">5. Correo</label>
                     <input type="email" class="form-control" id="exampleFormControlInput1"
                       placeholder="name@example.com">
                   </div>
                   <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <label for="exampleFormControlInput1" class="form-label">6. Teléfono</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Tipo de Proyecto">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">7. Dirección del Proyecto</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
+
+
+
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- 2 -->
+        <div class="col-6">
+          <div class="card mb-3">
+            <div class="row g-0">
+
+              <div class="col-md-8">
+                <div class="card-body">
+
+                  <!-- Select list -->
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">8. Sector</label>
+                    <!-- directiva @for -->
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione una opcion</option>
+                    @for (acti of Sectores; track acti.SectorId) {
+                      <option value=`{{acti.SectorId}}`>{{acti.SectorNombre}}</option>
+
+                    }
+                    </select>
+                  </div>
+
+                  <!-- Select list sub-sector -->
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">9. Sub-Sector</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione una opcion</option>
+                      <option value="1">Construccion</option>
+                      <option value="2">Infraestructura</option>
+                      <option value="3">Otro</option>
+                    </select>
+                  </div>
+
+                  <!-- Select list Actividad -->
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">10. Actividad</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione una opcion</option>
+                      <option value="1">Construccion</option>
+                      <option value="2">Infraestructura</option>
+                      <option value="3">Otro</option>
+                    </select>
+                  </div>
+
+                  <!-- Unidad -->
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">11. Unidad</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Unidad">
+                  </div>
+                  <!-- Categoria -->
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">12. Categoria</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Categoria">
+                  </div>
+                  <!-- Descripcion -->
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">13. Descripcion</label>
+                    <!-- <input type="text" class="form-control" id="exampleFormControlInput1"> -->
+                  </div>
+                  <!-- Unidades -->
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">14. Unidades</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Unidades">
+                  </div>
+                  <!-- Observacion -->
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">14. Observación</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+
+
       </div>
     </div>
   </div>

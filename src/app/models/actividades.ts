@@ -14,3 +14,9 @@ export interface Sectores {
   SectorNombre: string;
 }
 
+export interface Subsectores {
+  SubSectorId: string;
+  SubSectorNombre: string;
+  Tipo: string;
+}
+
