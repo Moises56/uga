@@ -1,4 +1,16 @@
+export interface Sectores {
+  _id: string;
+  SectorNombre: string;
+}
+
+export interface Subsectores {
+  _id: string;
+  SubSectorNombre: string;
+  Tipo: string;
+}
+
 export interface Actividades {
+  _id: string;
   SectorId: string;
   SubSectorId: string;
   Actividad: string;
@@ -9,14 +21,4 @@ export interface Actividades {
   Categoria: number;
 }
 
-export interface Sectores {
-  SectorId: string;
-  SectorNombre: string;
-}
-
-export interface Subsectores {
-  SubSectorId: string;
-  SubSectorNombre: string;
-  Tipo: string;
-}
 
