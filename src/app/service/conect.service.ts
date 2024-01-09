@@ -26,5 +26,10 @@ export class ConectService {
     return this.http.get<Actividades[]>('http://localhost:3000/actividad/'+id);
   }
 
+  // obtener la actividad pasando el id de la actividad
+  getActividad(id:string){
+    return this.http.get<Actividades[]>('http://localhost:3000/act/'+id);
+  }
+
 
 }

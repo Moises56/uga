@@ -21,4 +21,16 @@ export interface Actividades {
   Categoria: number;
 }
 
+export interface Activid {
+  Actividad: string;
+  CIIU_4: string;
+  Categoria: number;
+  Codigo: string;
+  Descripcion: string;
+  SectorId: string;
+  SubSectorId: string;
+  Unidad: string;
+  _id: string;
+}
+
 

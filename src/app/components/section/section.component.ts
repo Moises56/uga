@@ -5,9 +5,11 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { LoginComponent } from '../login/login.component';
 import { RouterLink, RouterOutlet, Data } from '@angular/router';
-import { Actividades, Sectores, Subsectores } from '../../models/actividades';
+import { Actividades, Sectores, Subsectores, Activid } from '../../models/actividades';
 import { ConectService } from '../../service/conect.service';
 import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
+import e from 'express';
+import { DiffieHellmanGroup } from 'crypto';
 
 
 @Component({
@@ -22,6 +24,10 @@ export class SectionComponent implements OnInit {
   Actividades:Actividades[] = [];
   Sectores:Sectores[] = [];
   SubSectores:Subsectores[] = [];
+  Actis: any = [];
+  Unidad = '';
+  Categoria:number = 0;
+  Description = '';
   // contactForm: FormGroup;
   resultado = '';
 
@@ -40,9 +46,9 @@ export class SectionComponent implements OnInit {
       sector: new FormControl(''),
       subsector: new FormControl(''),
       actividad: new FormControl(''),
-      unidad: new FormControl(''),
-      categoria: new FormControl(''),
-      descripcion: new FormControl(''),
+      // unidad: new FormControl(''),
+      // categoria: new FormControl(''),
+      // descripcion: new FormControl(''),
       unidades: new FormControl(''),
       observacion: new FormControl(''),
     });
@@ -76,9 +82,41 @@ export class SectionComponent implements OnInit {
     })
   }
 
+  onSelectActividad(event: any): void {
+    console.log(event.target.value)
+    this.conectS.getActividad(event.target.value).subscribe((data)=>{
+      // mostrar unidad y categoria
+      this.Actis = data;
+      this.Unidad = this.Actis.Unidad;
+      this.Categoria = this.Actis.Categoria;
+      this.Description = this.Actis.Descripcion;
+
+      // console.log({
+      //   unidad: this.Unidad,
+      //   categoria: this.Categoria,
+      //   descripcion: this.Description
+      // })
+
+
+    })
+  }
+
 
   sendData(){
-    console.log(this.formActividad.value);
+    console.log({
+      data: this.formActividad.value,
+      unidad: this.Unidad,
+      categoria: this.Categoria,
+      descripcion: this.Description
+    });
+
+    // limpiar formulario
+    this.formActividad.reset();
+    this.Unidad = '';
+    this.Categoria = 0;
+    this.Description = '';
+
+
 
   }
 

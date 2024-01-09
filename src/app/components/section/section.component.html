@@ -479,7 +479,7 @@
 
 
 
-<!-- modal -->
+<!--* modal -->
 <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title">Crear Solicitud</h4>
@@ -500,39 +500,46 @@
               <div class="col-md-8">
                 <div class="card-body">
 
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">1. Nombre Apoderado Legal</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                      formControlName="apoderado" placeholder="Apoderado" >
+                  <!-- Apoderado -->
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">1.</span>
+                    <input type="text" class="form-control" placeholder="Apoderado Legal" aria-label="Nombre Apoderado Legal" aria-describedby="basic-addon1" formControlName="apoderado">
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">2. Número de Identidad</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                      formControlName="dni" placeholder="Identidad">
+
+                  <!-- Identidad -->
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">2.</span>
+                    <input type="text" class="form-control" placeholder="Número de Identidad" aria-label="Número de Identidad" aria-describedby="basic-addon2" formControlName="dni">
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">3. Nombre Solicitante</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                      formControlName="solicitante" placeholder="Solicitante">
+
+                  <!-- Solicitante -->
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">3</span>
+                    <input type="text" class="form-control" placeholder="Nombre Solicitante" aria-label="Nombre Solicitante" aria-describedby="basic-addon3" formControlName="solicitante">
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">4. Nombre Proyecto</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                      formControlName="proyecto" placeholder="Proyecto">
+
+                  <!-- Nombre Proyecto -->
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon4">4</span>
+                    <input type="text" class="form-control" placeholder="Nombre Proyecto" aria-label="Nombre Proyecto" aria-describedby="basic-addon4"  formControlName="proyecto">
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">5. Correo</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                      formControlName="correo" placeholder="name@example.com">
+
+                  <!-- Correo -->
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon5">5</span>
+                    <input type="email" class="form-control" placeholder="Correo" aria-label="correo" aria-describedby="basic-addon5" formControlName="correo">
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">6. Teléfono</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                      formControlName="telefono" placeholder="Tipo de Proyecto">
+
+                  <!-- Telefono -->
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon6">6</span>
+                    <input type="text" class="form-control" placeholder="Telefono" aria-label="Télefono" aria-describedby="basic-addon6"  formControlName="telefono">
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">7. Dirección del Proyecto</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="direccion"></textarea>
+
+                  <!-- Direccion -->
+                  <div class="input-group">
+                    <span class="input-group-text">7</span>
+                    <textarea placeholder="Dirección del Proyecto" class="form-control" aria-label="With textarea" rows="3" formControlName="direccion"></textarea>
                   </div>
 
                 </div>
@@ -549,73 +556,68 @@
               <div class="col-md-8">
                 <div class="card-body">
 
-                  <!-- Select list -->
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">8. Sector</label>
-                    <!-- directiva @for -->
-                    <select formControlName="sector" class="form-select" aria-label="Default select example" (change)="onSelectSector($event)" >
-                      <option selected>Seleccione una opcion</option>
-                    @for (acti of Sectores; track acti._id) {
-                      <option  value="{{acti._id}}"  >{{acti.SectorNombre}}</option>
-                    }
+
+
+
+                  <!-- Select list Sector -->
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01" >8. Sector</label>
+                    <select class="form-select" id="inputGroupSelect01" formControlName="sector" (change)="onSelectSector($event)">
+                      <option selected>Seleccione una opcion...</option>
+                      @for (acti of Sectores; track acti._id) {
+                        <option  value="{{acti._id}}"  >{{acti.SectorNombre}}</option>
+                      }
                     </select>
                   </div>
 
                   <!-- Select list sub-sector -->
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">9. Sub-Sector</label>
-                    <select class="form-select" aria-label="Default select example" (change)="onSelectSubsector($event)">
-                      <option selected>Seleccione una opcion</option>
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect02">9. Sub-Sector</label>
+                    <select class="form-select" id="inputGroupSelect02" formControlName="subsector" (change)="onSelectSubsector($event)">
+                      <option selected>Choose...</option>
                       @for (subS of SubSectores; track subS._id) {
-                      <option value="{{subS._id}}">{{subS.SubSectorNombre}}</option>
-                      }
+                        <option value="{{subS._id}}">{{subS.SubSectorNombre}}</option>
+                        }
                     </select>
                   </div>
 
                   <!-- Select list Actividad -->
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">10. Actividad</label>
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>Seleccione una opcion</option>
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect03">10. Actividad</label>
+                    <select class="form-select" id="inputGroupSelect03" formControlName="actividad" (change)="onSelectActividad($event)">
+                      <option selected>Choose...</option>
                       @for (acti of Actividades; track acti._id) {
-                      <option value="{{acti._id}}">{{acti.ActividadNombre}}</option>
-                      }
-
+                        <option value="{{acti._id}}">{{acti.Actividad}}</option>
+                        }
                     </select>
                   </div>
 
                   <!-- Unidad -->
                   <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">11. Unidad</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                      placeholder="Unidad">
+                    <h6>11.Unidad<span class="bg-secondary">{{Actis.Unidad}}</span></h6>
                   </div>
+
                   <!-- Categoria -->
                   <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">12. Categoria</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                      placeholder="Categoria">
+                    <h6>12.Categoria<span class="bg-secondary">{{Actis.Categoria}}</span></h6>
                   </div>
+
                   <!-- Descripcion -->
                   <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">13. Descripcion</label>
-                    <!-- <input type="text" class="form-control" id="exampleFormControlInput1"> -->
+                    <h6>13. Descripcion<span class="bg-secondary">{{Actis.Descripcion}}</span></h6>
                   </div>
+
                   <!-- Unidades -->
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">14. Unidades</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                      placeholder="Unidades">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon14">14</span>
+                    <input type="text" class="form-control" placeholder="Unidades" aria-label="Unidades" aria-describedby="basic-addon14" formControlName="unidades">
                   </div>
+
                   <!-- Observacion -->
-                  <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">15. Observación</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                  <div class="input-group">
+                    <span class="input-group-text">15</span>
+                    <textarea placeholder="Observación" class="form-control" aria-label="With textarea" rows="3" formControlName="observacion"></textarea>
                   </div>
-
-
-
-
 
                 </div>
               </div>
