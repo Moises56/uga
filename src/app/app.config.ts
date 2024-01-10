@@ -8,5 +8,5 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), provideAnimations(), provideHttpClient()]
+  providers: [provideHttpClient(withFetch()), provideRouter(routes), provideClientHydration(), provideAnimations(), provideHttpClient()]
 };

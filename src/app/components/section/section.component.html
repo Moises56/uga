@@ -556,16 +556,13 @@
               <div class="col-md-8">
                 <div class="card-body">
 
-
-
-
                   <!-- Select list Sector -->
                   <div class="input-group mb-3">
                     <label class="input-group-text" for="inputGroupSelect01" >8. Sector</label>
                     <select class="form-select" id="inputGroupSelect01" formControlName="sector" (change)="onSelectSector($event)">
                       <option selected>Seleccione una opcion...</option>
                       @for (acti of Sectores; track acti._id) {
-                        <option  value="{{acti._id}}"  >{{acti.SectorNombre}}</option>
+                        <option value="{{acti._id}}">{{acti.SectorNombre}}</option>
                       }
                     </select>
                   </div>
@@ -574,7 +571,7 @@
                   <div class="input-group mb-3">
                     <label class="input-group-text" for="inputGroupSelect02">9. Sub-Sector</label>
                     <select class="form-select" id="inputGroupSelect02" formControlName="subsector" (change)="onSelectSubsector($event)">
-                      <option selected>Choose...</option>
+                      <option selected>Seleccione una opcion...</option>
                       @for (subS of SubSectores; track subS._id) {
                         <option value="{{subS._id}}">{{subS.SubSectorNombre}}</option>
                         }
@@ -585,7 +582,7 @@
                   <div class="input-group mb-3">
                     <label class="input-group-text" for="inputGroupSelect03">10. Actividad</label>
                     <select class="form-select" id="inputGroupSelect03" formControlName="actividad" (change)="onSelectActividad($event)">
-                      <option selected>Choose...</option>
+                      <option selected>Seleccione una opcion...</option>
                       @for (acti of Actividades; track acti._id) {
                         <option value="{{acti._id}}">{{acti.Actividad}}</option>
                         }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Data } from '@angular/router';
-import { Actividades, Sectores, Subsectores } from '../models/actividades'
+import { Actividades, Sectores, Subsectores, Datos } from '../models/actividades'
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +30,30 @@ export class ConectService {
   getActividad(id:string){
     return this.http.get<Actividades[]>('http://localhost:3000/act/'+id);
   }
+
+  // guardar los datos de la actividad
+  saveSolicitud(data: any): Observable<any>{
+    console.log(data.apoderado)
+    return this.http.post('http://localhost:3000/save',
+    {
+      apoderado: data.apoderado,
+      dni: data.dni,
+      solicitante: data.solicitante,
+      proyecto: data.proyecto,
+      correo: data.correo,
+      telefono: data.telefono,
+      direccion: data.direccion,
+      sector: data.sector,
+      subsector: data.subsector,
+      actividad: data.actividad,
+      unidad: data.unidad,
+      categoria: data.categoria,
+      descripcion: data.descripcion,
+      unidades: data.unidades,
+      observacion: data.observacion
+    });
+  }
+
 
 
 }

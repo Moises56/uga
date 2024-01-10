@@ -73,6 +73,10 @@ export class SectionComponent implements OnInit {
     })
   }
 
+
+
+
+
   onSelectSubsector(event: any): void {
     // Lógica que se ejecutará al seleccionar un elemento
     console.log('Elemento seleccionado:', event.target.value);
@@ -103,12 +107,38 @@ export class SectionComponent implements OnInit {
 
 
   sendData(){
-    console.log({
-      data: this.formActividad.value,
-      unidad: this.Unidad,
-      categoria: this.Categoria,
-      descripcion: this.Description
-    });
+    const data = {
+      Apoderado: this.formActividad.value.apoderado,
+      DNI: this.formActividad.value.dni,
+      Solicitante: this.formActividad.value.solicitante,
+      Proyecto: this.formActividad.value.proyecto,
+      Correo: this.formActividad.value.correo,
+      Telefono: this.formActividad.value.telefono,
+      Direccion: this.formActividad.value.direccion,
+      Sector: this.formActividad.value.sector,
+      SubSector: this.formActividad.value.subsector,
+      Actividad: this.formActividad.value.actividad,
+      Unidad: this.Unidad,
+      Categoria: this.Categoria,
+      Descripcion: this.Description,
+      Unidades: this.formActividad.value.unidades,
+      Observacion: this.formActividad.value.observacion
+    };
+    console.log(data.Apoderado);
+    // guardar los datos
+    this.conectS.saveSolicitud(data).subscribe((data)=>{
+      console.log(data);
+      alert('Datos guardados correctamente');
+      },(error)=>{
+        console.log(error);
+      }
+    );
+
+
+
+
+
+
 
     // limpiar formulario
     this.formActividad.reset();

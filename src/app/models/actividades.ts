@@ -33,4 +33,22 @@ export interface Activid {
   _id: string;
 }
 
+export interface Datos {
+  Apoderado: string,
+  DNI: string,
+  Solicitante: string,
+  Proyecto: string,
+  Correo: string,
+  Telefono: string,
+  Direccion: string,
+  Sector: string,
+  SubSector: string,
+  Actividad: string,
+  Unidad: string,
+  Categoria: string,
+  Descripcion: string,
+  Unidades: string,
+  Observacion: string
+}
+
 
