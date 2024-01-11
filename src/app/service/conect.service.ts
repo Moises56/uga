@@ -65,6 +65,13 @@ export class ConectService {
     });
   }
 
+  // obtener los datos de la solicitud
+  getSolicitud(){
+    return this.http.get<Datos[]>(this.URLPROD + '/solicitud');
+    // return this.http.get<Datos[]>('http://localhost:3000/solicitud');
+  }
+  
+
 
 
 }

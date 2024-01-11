@@ -8,8 +8,6 @@ import { RouterLink, RouterOutlet, Data } from '@angular/router';
 import { Actividades, Sectores, Subsectores, Activid, Datos } from '../../models/actividades';
 import { ConectService } from '../../service/conect.service';
 import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
-import e from 'express';
-import { DiffieHellmanGroup } from 'crypto';
 
 
 @Component({

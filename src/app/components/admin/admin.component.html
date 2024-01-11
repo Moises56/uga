@@ -28,10 +28,10 @@
                 <span class="tooltip">Usuarios</span>
             </li>
             <li>
-                <a href="#" onclick="msjEnviados()">
+                <a class="cursor-acti" (click)="versolicitud()">
                     <!-- <i class='bx bx-send'></i> -->
                     <i class="bx bx-alarm"></i>
-                    <span class="links-name">Pendientes</span>
+                    <span class="links-name">Solicitudes</span>
                 </a>
                 <span class="tooltip">Pendientes</span>
             </li>
@@ -84,6 +84,13 @@
             <div [ngClass]="{'visible':regionVisible == 'user', 'no-visible':regionVisible != 'user'}">
               <div>
                 <app-user></app-user>
+              </div>
+            </div>
+
+            <!-- mostrar solicitudComponete -->
+            <div [ngClass]="{'visible':regionVisible == 'solicitud', 'no-visible':regionVisible != 'solicitud'}">
+              <div>
+                <app-solicitud></app-solicitud>
               </div>
             </div>
 

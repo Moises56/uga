@@ -1,50 +1,28 @@
-
-<div class="container pdt">
-  <div class="row row-cols-1 row-cols-md-5 g-4">
-
-      <!-- 1 -->
-      <div class="col">
-          <div class="card w-75 mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                  <div class="col-md-4">
-                      <img src="/GAMBelleza.png" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                        <div class="form-control">
-                          <label for="validationCustom01" class="form-label">1. NOMBRE DEL APODERADO LEGAL</label>
-                          <input type="text" class="form-control" id="validationCustom01" value="" placeholder="Apoderado" required>
-
-                        </div>
-
-
-
-                          <a href="#">
-                              <h5 class="card-title">Card title</h5>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <!-- 2 -->
-      <div class="col">
-          <div class="card mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                  <div class="col-md-4">
-                      <img src="/GAMBelleza.png" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                          <a href="#">
-                              <h5 class="card-title">Card title</h5>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-  </div>
-</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Apoderado</th>
+      <th scope="col">Solicitante</th>
+      <th scope="col">Sector</th>
+      <th scope="col">Subsector</th>
+      <th scope="col">Actividad</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (sol of Solicitud; track sol._id; let i = $index) {
+      <tr>
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ sol.Apoderado }}</td>
+        <td>{{ sol.Solicitante }}</td>
+        <td>{{ sol.Sector }}</td>
+        <td>{{ sol.SubSector }}</td>
+        <td>{{ sol.Actividad }}</td>
+        <td>
+          <button type="button" class="btn btn-primary" (click)="verSolicitud(sol._id)">Ver</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
