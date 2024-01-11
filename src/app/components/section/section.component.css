@@ -11,20 +11,86 @@
 
 .bg-info{
   border-radius: .25rem !important;
-  color: #FFF;
+  color: #6ce8ec !important;
   padding-left: 2px !important;
   padding-right: 2px !important;
   margin-left: 15px !important;
 }
 .bg-secondary{
   border-radius: .25rem !important;
-  color: #FFF;
+  color: #6ce8ec;
   padding-left: 2px !important;
   padding-right: 2px !important;
   margin-left: 15px !important;
 }
 
+.bg-badge{
+    border-radius: 0.25rem !important;
+    color: #6ce8ec;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    margin-left: 15px !important;
+    background-color: #747070;
+    opacity: 1;
+}
+
 .visible-input{
   display: none !important;
+}
+
+.cart1{
+  flex: 0 0 auto;
+  width: 50%;
 
 }
+
+/** pantalla movil */
+@media (max-width: 768px) {
+  .visible-input{
+    display: block !important;
+  }
+  .hidden-input{
+    display: none !important;
+  }
+
+  .cart1{
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+
+}
+
+/** pantalla escritorio */
+@media (min-width: 768px) {
+  .visible-input{
+    display: none !important;
+  }
+  .hidden-input{
+    display: block !important;
+  }
+
+  .cart1{
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+
+
+}
+
+/** pantalla tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .visible-input{
+    display: none !important;
+  }
+  .hidden-input{
+    display: block !important;
+  }
+
+  .cart1{
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+

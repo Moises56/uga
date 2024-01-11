@@ -5,7 +5,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { LoginComponent } from '../login/login.component';
 import { RouterLink, RouterOutlet, Data } from '@angular/router';
-import { Actividades, Sectores, Subsectores, Activid } from '../../models/actividades';
+import { Actividades, Sectores, Subsectores, Activid, Datos } from '../../models/actividades';
 import { ConectService } from '../../service/conect.service';
 import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
 import e from 'express';
@@ -107,30 +107,34 @@ export class SectionComponent implements OnInit {
 
 
   sendData(){
-    const data = {
-      Apoderado: this.formActividad.value.apoderado,
-      DNI: this.formActividad.value.dni,
-      Solicitante: this.formActividad.value.solicitante,
-      Proyecto: this.formActividad.value.proyecto,
-      Correo: this.formActividad.value.correo,
-      Telefono: this.formActividad.value.telefono,
-      Direccion: this.formActividad.value.direccion,
-      Sector: this.formActividad.value.sector,
-      SubSector: this.formActividad.value.subsector,
-      Actividad: this.formActividad.value.actividad,
-      Unidad: this.Unidad,
-      Categoria: this.Categoria,
-      Descripcion: this.Description,
-      Unidades: this.formActividad.value.unidades,
-      Observacion: this.formActividad.value.observacion
-    };
-    console.log(data.Apoderado);
+    const data =
+      {
+        apoderado: this.formActividad.value.apoderado,
+        dni: this.formActividad.value.dni,
+        solicitante: this.formActividad.value.solicitante,
+        proyecto: this.formActividad.value.proyecto,
+        correo: this.formActividad.value.correo,
+        telefono: this.formActividad.value.telefono,
+        direccion: this.formActividad.value.direccion,
+        sector: this.formActividad.value.sector,
+        subsector: this.formActividad.value.subsector,
+        actividad: this.formActividad.value.actividad,
+        unidad: this.Unidad,
+        categoria: this.Categoria,
+        descripcion: this.Description,
+        unidades: this.formActividad.value.unidades,
+        observacion: this.formActividad.value.observacion
+      };
+
+    console.log(data);
     // guardar los datos
-    this.conectS.saveSolicitud(data).subscribe((data)=>{
-      console.log(data);
-      alert('Datos guardados correctamente');
-      },(error)=>{
-        console.log(error);
+    this.conectS.saveSolicitud(data).subscribe(
+      res=>{
+        console.log(res);
+        alert('Datos guardados correctamente');
+      },
+      err=>{
+        console.log(err);
       }
     );
 

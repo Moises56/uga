@@ -34,21 +34,21 @@ export interface Activid {
 }
 
 export interface Datos {
-  Apoderado: string,
-  DNI: string,
-  Solicitante: string,
-  Proyecto: string,
-  Correo: string,
-  Telefono: string,
-  Direccion: string,
-  Sector: string,
-  SubSector: string,
-  Actividad: string,
-  Unidad: string,
-  Categoria: string,
-  Descripcion: string,
-  Unidades: string,
-  Observacion: string
+  apoderado: string,
+  dni: string,
+  solicitante: string,
+  proyecto: string,
+  correo: string,
+  telefono: string,
+  direccion: string,
+  sector: string,
+  subsector: string,
+  actividad: string,
+  unidad: string,
+  categoria: string,
+  descripcion: string,
+  unidades: string,
+  observacion: string
 }
 
 

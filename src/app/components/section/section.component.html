@@ -493,52 +493,52 @@
       <div class="row">
 
         <!-- 1 -->
-        <div class="col-6">
+        <div class="cart1">
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
 
-              <div class="col-md-8">
+              <div class="col-md-12">
                 <div class="card-body">
 
                   <!-- Apoderado -->
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">1.</span>
+                    <span class="input-group-text" id="basic-addon1"><b>1.</b></span>
                     <input type="text" class="form-control" placeholder="Apoderado Legal" aria-label="Nombre Apoderado Legal" aria-describedby="basic-addon1" formControlName="apoderado">
                   </div>
 
                   <!-- Identidad -->
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon2">2.</span>
+                    <span class="input-group-text" id="basic-addon2"><b>2.</b></span>
                     <input type="text" class="form-control" placeholder="Número de Identidad" aria-label="Número de Identidad" aria-describedby="basic-addon2" formControlName="dni">
                   </div>
 
                   <!-- Solicitante -->
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">3</span>
+                    <span class="input-group-text" id="basic-addon3"><b>3</b></span>
                     <input type="text" class="form-control" placeholder="Nombre Solicitante" aria-label="Nombre Solicitante" aria-describedby="basic-addon3" formControlName="solicitante">
                   </div>
 
                   <!-- Nombre Proyecto -->
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon4">4</span>
+                    <span class="input-group-text" id="basic-addon4"><b>4.</b></span>
                     <input type="text" class="form-control" placeholder="Nombre Proyecto" aria-label="Nombre Proyecto" aria-describedby="basic-addon4"  formControlName="proyecto">
                   </div>
 
                   <!-- Correo -->
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon5">5</span>
+                    <span class="input-group-text" id="basic-addon5"><b>5.</b></span>
                     <input type="email" class="form-control" placeholder="Correo" aria-label="correo" aria-describedby="basic-addon5" formControlName="correo">
                   </div>
 
                   <!-- Telefono -->
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon6">6</span>
+                    <span class="input-group-text" id="basic-addon6"><b>6.</b></span>
                     <input type="text" class="form-control" placeholder="Telefono" aria-label="Télefono" aria-describedby="basic-addon6"  formControlName="telefono">
                   </div>
 
                   <!-- Direccion -->
                   <div class="input-group">
-                    <span class="input-group-text">7</span>
+                    <span class="input-group-text"><b>7.</b></span>
                     <textarea placeholder="Dirección del Proyecto" class="form-control" aria-label="With textarea" rows="3" formControlName="direccion"></textarea>
                   </div>
 
@@ -549,16 +549,16 @@
         </div>
 
         <!-- 2 -->
-        <div class="col-6">
+        <div class="cart1">
           <div class="card mb-3">
             <div class="row g-0">
 
-              <div class="col-md-8">
+              <div class="col-md-12">
                 <div class="card-body">
 
                   <!-- Select list Sector -->
                   <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupSelect01" >8. Sector</label>
+                    <label class="input-group-text" for="inputGroupSelect01" ><b>8. Sector</b></label>
                     <select class="form-select" id="inputGroupSelect01" formControlName="sector" (change)="onSelectSector($event)">
                       <option selected>Seleccione una opcion...</option>
                       @for (acti of Sectores; track acti._id) {
@@ -569,7 +569,7 @@
 
                   <!-- Select list sub-sector -->
                   <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupSelect02">9. Sub-Sector</label>
+                    <label class="input-group-text" for="inputGroupSelect02"><b>9. Sub-Sector</b></label>
                     <select class="form-select" id="inputGroupSelect02" formControlName="subsector" (change)="onSelectSubsector($event)">
                       <option selected>Seleccione una opcion...</option>
                       @for (subS of SubSectores; track subS._id) {
@@ -580,7 +580,7 @@
 
                   <!-- Select list Actividad -->
                   <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupSelect03">10. Actividad</label>
+                    <label class="input-group-text" for="inputGroupSelect03"><b>10. Actividad</b></label>
                     <select class="form-select" id="inputGroupSelect03" formControlName="actividad" (change)="onSelectActividad($event)">
                       <option selected>Seleccione una opcion...</option>
                       @for (acti of Actividades; track acti._id) {
@@ -591,29 +591,29 @@
 
                   <!-- Unidad -->
                   <div class="mb-3">
-                    <h6>11.Unidad<span class="bg-secondary">{{Actis.Unidad}}</span></h6>
+                    <h6><b>11. Unidad</b><span class="bg-badge">{{Actis.Unidad}}</span></h6>
                   </div>
 
                   <!-- Categoria -->
                   <div class="mb-3">
-                    <h6>12.Categoria<span class="bg-secondary">{{Actis.Categoria}}</span></h6>
+                    <h6><b>12. Categoria</b><span class="bg-badge">{{Actis.Categoria}}</span></h6>
                   </div>
 
                   <!-- Descripcion -->
                   <div class="mb-3">
-                    <h6>13. Descripcion<span class="bg-secondary">{{Actis.Descripcion}}</span></h6>
+                    <h6><b>13. Descripcion</b><span class="bg-badge">{{Actis.Descripcion}}</span></h6>
                   </div>
 
                   <!-- Unidades -->
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon14">14</span>
+                    <span class="input-group-text" id="basic-addon14"><b>14.</b></span>
                     <input type="text" class="form-control" placeholder="Unidades" aria-label="Unidades" aria-describedby="basic-addon14" formControlName="unidades">
                   </div>
 
                   <!-- Observacion -->
                   <div class="input-group">
-                    <span class="input-group-text">15</span>
-                    <textarea placeholder="Observación" class="form-control" aria-label="With textarea" rows="3" formControlName="observacion"></textarea>
+                    <span class="input-group-text"><b>15.</b></span>
+                    <textarea placeholder="Observación" class="form-control" aria-label="With textarea" rows="2" formControlName="observacion"></textarea>
                   </div>
 
                 </div>
@@ -625,7 +625,7 @@
           </div>
         </div>
 
-        <button class="btn btn-primary">Enviar Solicitud</button>
+        <button class="btn btn-primary"><b>Enviar Solicitud</b></button>
 
 
       </div>
