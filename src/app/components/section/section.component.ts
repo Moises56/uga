@@ -130,6 +130,9 @@ export class SectionComponent implements OnInit {
       res=>{
         console.log(res);
         alert('Datos guardados correctamente');
+        //cerrar modal
+        this.modalService.dismissAll();
+
       },
       err=>{
         console.log(err);
