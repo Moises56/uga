@@ -6,6 +6,10 @@
 .dni-p{
   padding-left: 74px;
   margin-bottom: 5px;
+  /* width: 16%;
+  height: 42px;
+  text-align: center; */
+
 }
 .sol-p{
   padding-left: 22px;
@@ -25,8 +29,12 @@
   padding-left: 37px;
   margin-bottom: 5px;
 }
+.des-p{
+  padding-left: 14px;
+  margin-bottom: 5px;
+}
 .sec-p{
-  padding-left: 51px;
+  padding-left: 53px;
   margin-bottom: 5px;
 
 }
@@ -56,91 +64,33 @@
 }
 
 
-
-
-/* *{
-  margin-top: 3%;
-  padding: 0;
-  box-sizing: border-box;
-  margin-left: 1%;
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* .dni-p{
+    width: 37%;
+    height: 42px;
+    text-align: center;
 } */
 
-/* para pantallas moviles */
-/* @media (max-width: 768px) {
-  *{
-    margin-top: 7%;
-    padding: 0;
-    box-sizing: border-box;
-    margin-left: 4%;
-  }
-  .contenedor{
-    margin-top: 15%;
-    margin-left: 4px;
-  }
+ }
 
-} */
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
 
-/* pantallas de tablet  */
-/* @media (min-width: 768px) and (max-width: 1024px) {
-  *{
-    margin-top: 7%;
-    padding: 0;
-    box-sizing: border-box;
-    margin-left: 4%;
-  }
-  .contenedor{
-    margin-top: 15%;
-    margin-left: 4px;
-  }
-} */
+ }
 
-.fila-solicitud{
-  cursor: pointer;
-}
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
 
 
+ }
 
-/** pantalla movil */
-/* @media (max-width: 768px) {
-  .visible-input{
-    display: block !important;
-  }
-  .hidden-input{
-    display: none !important;
-  }
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 
-  .cart1{
-    flex: 0 0 auto;
-    width: 100%;
-  }
-} */
+ }
 
-/** pantalla escritorio */
-/* @media (min-width: 768px) {
-  .visible-input{
-    display: none !important;
-  }
-  .hidden-input{
-    display: block !important;
-  }
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
 
-  .cart1{
-    flex: 0 0 auto;
-    width: 50%;
-  }
-} */
-
-/** pantalla tablet */
-/* @media (min-width: 768px) and (max-width: 1024px) {
-  .visible-input{
-    display: none !important;
-  }
-  .hidden-input{
-    display: block !important;
-  }
-
-  .cart1{
-    flex: 0 0 auto;
-    width: 100%;
-  }
-} */
+ }
