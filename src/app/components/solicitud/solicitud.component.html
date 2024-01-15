@@ -1,11 +1,11 @@
 <table class="table table-striped">
   <thead>
-    <tr >
+    <tr>
       <th scope="col">#</th>
       <th scope="col">Apoderado</th>
       <th scope="col">Solicitante</th>
       <th scope="col">Proyecto</th>
-      <th scope="col">Actividad</th>
+      <!-- <th scope="col">Actividad</th> -->
       <th scope="col">Categoria</th>
       <!-- <th scope="col">Acciones</th> -->
     </tr>
@@ -13,172 +13,141 @@
   <tbody>
     <!--  (click)="verSolicitud(sol._id)" -->
     @for (sol of Solicitud; track sol._id; let i = $index) {
-      <tr class="fila-solicitud" (click)="open(content, sol._id)">
-        <th scope="row">{{ i + 1 }}</th>
-        <td>{{ sol.Apoderado }}</td>
-        <td>{{ sol.Solicitante }}</td>
-        <td>{{ sol.Proyecto }}</td>
-        <td>{{ sol.Actividad }}</td>
-        <td>{{ sol.Categoria }}</td>
-        <!-- <td>
+    <tr class="fila-solicitud" (click)="open(content, sol._id)">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ sol.Apoderado }}</td>
+      <td>{{ sol.Solicitante }}</td>
+      <td>{{ sol.Proyecto }}</td>
+      <!-- <td>{{ sol.Actividad }}</td> -->
+      <td>{{ sol.Categoria }}</td>
+      <!-- <td>
           <button type="button" class="btn btn-primary" >Ver</button>
         </td> -->
-      </tr>
+    </tr>
     }
   </tbody>
 </table>
 
 <!-- Modal Detalle -->
 
-<ng-template #content let-c="close" let-d="dismiss">
-	<div class="modal-header">
-		<h4 class="modal-title " id="modal-basic-title">Solicitud Creada: <b>{{Sol.createdAt}}</b></h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
-	</div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title " id="modal-basic-title">Solicitud Creada: <b>{{Sol.createdAt}}</b></h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
 
-	<div class="modal-body">
-		<!-- <p>Hello, World! {{id}}</p> -->
+  <div class="modal-body">
+    <!-- <p>Hello, World! {{id}}</p> -->
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
+      <!-- <div class="row">
+          <div class="col-3">
+            <p class="columna1"> Apoderado</p>
+            <p class="columna1">DNI</p>
+            <p class="columna1">Solicitante</p>
+            <p class="columna1">Proyecto</p>
+            <p class="columna1">Correo</p>
+            <p class="columna1">Teléfono</p>
 
-          <ol class="list-group list-group-numbered">
-            <!-- @for (sol of Sol; track sol._id) { -->
-              <div class="row">
-                <div class="col-6">
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Apoderado</div>
-                      {{Sol.Apoderado}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">DNI</div>
-                      {{Sol.DNI}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Solicitante</div>
-                      {{Sol.Solicitante}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Proyecto</div>
-                      {{Sol.Proyecto}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Correo</div>
-                      {{Sol.Correo}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Teléfono</div>
-                      {{Sol.Telefono}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Dirección</div>
-                      {{Sol.Direccion}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
+            <p class="columna1">Sector</p>
+            <p class="columna1">Sub Sector</p>
+            <p class="columna1">Actividad</p>
+            <p class="columna1">Unidad</p>
+            <p class="columna1">Categoria</p>
+            <p class="columna1">Unidades</p>
+            <p class="columna1">Observación</p>
+          </div>
 
-                </div>
+          <div class="col-9">
+            <p class="columna2">{{Sol.Apoderado}} </p>
+            <p class="columna2">{{Sol.DNI}}</p>
+            <p class="columna2">{{Sol.Solicitante}}</p>
+            <p class="columna2">{{Sol.Proyecto}}</p>
+            <p class="columna2">{{Sol.Correo}}</p>
+            <p class="columna2">{{Sol.Telefono}}</p>
 
-                <div class="col-6">
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Sector</div>
-                      {{Sol.Sector}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Sub Sector</div>
-                      {{Sol.SubSector}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Actividad</div>
-                      {{Sol.Actividad}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Unidad</div>
-                      {{Sol.Unidad}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Categoria</div>
-                      {{Sol.Categoria}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Descripción</div>
-                      {{Sol.Descripcion}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Unidades</div>
-                      {{Sol.Unidades}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Observación</div>
-                      {{Sol.Observacion}}
-                    </div>
-                    <!-- <span class="badge bg-primary rounded-pill">14</span> -->
-                  </li>
+            <p class="columna2">{{Sol.Sector}}</p>
+            <p class="columna2">{{Sol.SubSector}}</p>
+            <p class="columna2">{{Sol.Actividad}}</p>
+            <p class="columna2">{{Sol.Unidad}}</p>
+            <p class="columna2">{{Sol.Categoria}}</p>
+            <p class="columna2">{{Sol.Unidades}}</p>
+            <p class="columna2">{{Sol.Observacion}}</p>
+          </div>
+        </div> -->
 
-                </div>
-
+        <div class="row">
+          <div class="col">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item">Apoderado</li>
+              <li class="list-group-item">{{Sol.Apoderado}}</li>
+              <!-- <div class="col-4">
               </div>
+              <div class="col-8">
+              </div> -->
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item dni-p">DNI</li>
+              <li class="list-group-item">{{Sol.DNI}}</li>
+              <!-- <div class="col-4">
+              </div>
+              <div class="col-8">
+              </div> -->
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item sol-p">Solicitante</li>
+              <li class="list-group-item">{{Sol.Solicitante}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item pro-p">Proyecto</li>
+              <li class="list-group-item">{{Sol.Proyecto}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item correo-p">Correo</li>
+              <li class="list-group-item">{{Sol.Correo}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item tel-p">Teléfono</li>
+              <li class="list-group-item">{{Sol.Telefono}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item sec-p">Sector</li>
+              <li class="list-group-item">{{Sol.Sector}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item subsec-p">Sub Secto</li>
+              <li class="list-group-item">{{Sol.SubSector}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item act-p">Actividad</li>
+              <li class="list-group-item">{{Sol.Actividad}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item unidad-p">Unidad</li>
+              <li class="list-group-item">{{Sol.Unidad}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item cat-p">Categoria</li>
+              <li class="list-group-item">{{Sol.Categoria}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item unis-p">Unidades</li>
+              <li class="list-group-item">{{Sol.Unidades}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item obs-p">Observación</li>
+              <li class="list-group-item">{{Sol.Observacion}}</li>
+            </ul>
 
-
-
-
-            <!-- } -->
-
-
-
-
-          </ol>
-
+          </div>
         </div>
       </div>
     </div>
-	</div>
 
-	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
-	</div>
+  <!-- </div> -->
+
+  <div class="modal-footer">
+    <!-- <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button> -->
+  </div>
 </ng-template>
 
 <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
-

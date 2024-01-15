@@ -1,3 +1,78 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100px;
+}
+
+iframe {
+  width: 500px;
+  height: 300px;
+}
+
+.columna1{
+  border: solid 1px rgb(88, 81, 81);
+  margin: 1px;
+  padding: 2px;
+}
+.columna2{
+  border: solid 1px rgb(88, 81, 81);
+  margin: 1px;
+  padding: 2px;
+}
+
+.dni-p{
+  padding-left: 74px;
+}
+.sol-p{
+  padding-left: 22px;
+}
+.pro-p{
+  padding-left: 35px;
+}
+.correo-p{
+  padding-left: 49px;
+}
+.tel-p{
+  padding-left: 37px;
+}
+.sec-p{
+  padding-left: 51px;
+}
+.subsec-p{
+  padding-left: 24px;
+}
+.act-p{
+  padding-left: 28px;
+}
+.unidad-p{
+  padding-left: 45px;
+}
+.cat-p{
+  padding-left: 23px;
+}
+.unis-p{
+  padding-left: 29px;
+}
+.obs-p{
+  padding-left: 5px;
+}
+
+
+
+
 /* *{
   margin-top: 3%;
   padding: 0;

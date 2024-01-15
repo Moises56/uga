@@ -19,7 +19,7 @@ import { HeaderComponent } from '../header/header.component';
 export class AppComponent {
   regionVisible: String = '';
   isMenuCollapsed = true;
-  loggedIn:boolean = false;
+  loggedIn:boolean = true;
   visibleSection = true;
   visibleS:boolean = false;
 
