@@ -33,41 +33,60 @@ iframe {
   padding: 2px;
 }
 
+.apo-p{
+  /* padding-left: 30px; */
+  margin-bottom: 5px;
+}
 .dni-p{
   padding-left: 74px;
+  margin-bottom: 5px;
 }
 .sol-p{
   padding-left: 22px;
+  margin-bottom: 5px;
+
 }
 .pro-p{
   padding-left: 35px;
+  margin-bottom: 5px;
+
 }
 .correo-p{
   padding-left: 49px;
+  margin-bottom: 5px;
 }
 .tel-p{
   padding-left: 37px;
+  margin-bottom: 5px;
 }
 .sec-p{
   padding-left: 51px;
+  margin-bottom: 5px;
+
 }
 .subsec-p{
   padding-left: 24px;
+  margin-bottom: 5px;
 }
 .act-p{
   padding-left: 28px;
+  margin-bottom: 5px;
 }
 .unidad-p{
   padding-left: 45px;
+  margin-bottom: 5px;
 }
 .cat-p{
   padding-left: 23px;
+  margin-bottom: 5px;
 }
 .unis-p{
   padding-left: 29px;
+  margin-bottom: 5px;
 }
 .obs-p{
   padding-left: 5px;
+  margin-bottom: 5px;
 }
 
 

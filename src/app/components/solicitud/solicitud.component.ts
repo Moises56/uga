@@ -42,7 +42,7 @@ export class SolicitudComponent implements OnInit {
     //   this.modalService.open(content, { size: 'xl' });
     // }
     open(content: TemplateRef<any>, idSol:string) {
-      this.modalService.open(content, { size: 'xl' });
+      this.modalService.open(content, { size: 'lg' });
       this.idSol = idSol;
       console.log('ver solicitud: ', idSol)
       this.conectS.getSolicitudId(idSol).subscribe((data)=>{
