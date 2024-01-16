@@ -39,118 +39,89 @@
   <div class="modal-body">
     <!-- <p>Hello, World! {{id}}</p> -->
     <div class="container">
-      <!-- <div class="row">
-          <div class="col-3">
-            <p class="columna1"> Apoderado</p>
-            <p class="columna1">DNI</p>
-            <p class="columna1">Solicitante</p>
-            <p class="columna1">Proyecto</p>
-            <p class="columna1">Correo</p>
-            <p class="columna1">Teléfono</p>
+      <div class="row">
+        <div class="col-12">
 
-            <p class="columna1">Sector</p>
-            <p class="columna1">Sub Sector</p>
-            <p class="columna1">Actividad</p>
-            <p class="columna1">Unidad</p>
-            <p class="columna1">Categoria</p>
-            <p class="columna1">Unidades</p>
-            <p class="columna1">Observación</p>
-          </div>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary apo-p"><b>Apoderado</b></li>
+            <li class="list-group-item apo-p">{{Sol.Apoderado}}</li>
+          </ul>
 
-          <div class="col-9">
-            <p class="columna2">{{Sol.Apoderado}} </p>
-            <p class="columna2">{{Sol.DNI}}</p>
-            <p class="columna2">{{Sol.Solicitante}}</p>
-            <p class="columna2">{{Sol.Proyecto}}</p>
-            <p class="columna2">{{Sol.Correo}}</p>
-            <p class="columna2">{{Sol.Telefono}}</p>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary dni-p"><b>DNI</b></li>
+            <li class="list-group-item apo-p">{{Sol.DNI}}</li>
+          </ul>
 
-            <p class="columna2">{{Sol.Sector}}</p>
-            <p class="columna2">{{Sol.SubSector}}</p>
-            <p class="columna2">{{Sol.Actividad}}</p>
-            <p class="columna2">{{Sol.Unidad}}</p>
-            <p class="columna2">{{Sol.Categoria}}</p>
-            <p class="columna2">{{Sol.Unidades}}</p>
-            <p class="columna2">{{Sol.Observacion}}</p>
-          </div>
-        </div> -->
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary sol-p"><b>Solicitante</b></li>
+            <li class="list-group-item apo-p">{{Sol.Solicitante}}</li>
+          </ul>
 
-        <div class="row">
-          <div class="col-12">
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary apo-p"><b>Apoderado</b></li>
-              <li class="list-group-item apo-p">{{Sol.Apoderado}}</li>
-              <!-- <div class="col-4">
-              </div>
-              <div class="col-8">
-              </div> -->
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary dni-p"><b>DNI</b></li>
-              <li class="list-group-item apo-p">{{Sol.DNI}}</li>
-              <!-- <div class="col-4">
-              </div>
-              <div class="col-8">
-              </div> -->
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary sol-p"><b>Solicitante</b></li>
-              <li class="list-group-item apo-p">{{Sol.Solicitante}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary pro-p"><b>Proyecto</b></li>
-              <li class="list-group-item apo-p">{{Sol.Proyecto}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary correo-p"><b>Correo</b></li>
-              <li class="list-group-item apo-p">{{Sol.Correo}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary tel-p"><b>Teléfono</b></li>
-              <li class="list-group-item apo-p">{{Sol.Telefono}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary des-p"><b>Descripción</b></li>
-              <li class="list-group-item apo-p">{{Sol.Descripcion}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary sec-p"><b>Sector</b></li>
-              <li class="list-group-item apo-p">{{Sol.Sector}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary subsec-p"><b>SubSector</b></li>
-              <li class="list-group-item apo-p">{{Sol.SubSector}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary act-p"><b>Actividad</b></li>
-              <li class="list-group-item apo-p">{{Sol.Actividad}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary unidad-p"><b>Unidad</b></li>
-              <li class="list-group-item apo-p">{{Sol.Unidad}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary cat-p"><b>Categoria</b></li>
-              <li class="list-group-item apo-p">{{Sol.Categoria}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary unis-p"><b>Unidades</b></li>
-              <li class="list-group-item apo-p">{{Sol.Unidades}}</li>
-            </ul>
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item list-group-item-secondary obs-p"><b>Observación</b></li>
-              <li class="list-group-item apo-p">{{Sol.Observacion}}</li>
-            </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary pro-p"><b>Proyecto</b></li>
+            <li class="list-group-item apo-p">{{Sol.Proyecto}}</li>
+          </ul>
 
-          </div>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary correo-p"><b>Correo</b></li>
+            <li class="list-group-item apo-p">{{Sol.Correo}}</li>
+          </ul>
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary tel-p"><b>Teléfono</b></li>
+            <li class="list-group-item apo-p">{{Sol.Telefono}}</li>
+          </ul>
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary des-p"><b>Descripción</b></li>
+            <li class="list-group-item apo-p">{{Sol.Descripcion}}</li>
+          </ul>
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary sec-p"><b>Sector</b></li>
+            <li class="list-group-item apo-p">{{Sol.Sector}}</li>
+          </ul>
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary subsec-p"><b>SubSector</b></li>
+            <li class="list-group-item apo-p">{{Sol.SubSector}}</li>
+          </ul>
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary act-p"><b>Actividad</b></li>
+            <li class="list-group-item apo-p">{{Sol.Actividad}}</li>
+          </ul>
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary unidad-p"><b>Unidad</b></li>
+            <li class="list-group-item apo-p">{{Sol.Unidad}}</li>
+          </ul>
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary cat-p"><b>Categoria</b></li>
+            <li class="list-group-item apo-p">{{Sol.Categoria}}</li>
+          </ul>
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary unis-p"><b>Unidades</b></li>
+            <li class="list-group-item apo-p">{{Sol.Unidades}}</li>
+          </ul>
+
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-secondary obs-p"><b>Observación</b></li>
+            <li class="list-group-item apo-p">{{Sol.Observacion}}</li>
+          </ul>
+
         </div>
       </div>
     </div>
+  </div>
 
   <!-- </div> -->
 
   <div class="modal-footer">
-    <!-- <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button> -->
+    <button type="button" class="btn btn-success" (click)="AprobarSol(Sol._id)">Aprobar Solicitud</button>
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
   </div>
 </ng-template>
 

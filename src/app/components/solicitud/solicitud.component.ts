@@ -67,15 +67,16 @@ export class SolicitudComponent implements OnInit {
     }
 
 
-    // verSolicitud(idSol:string){
-    //   console.log('ver solicitud: ', idSol)
-    //   this.conectS.getSolicitudId(idSol).subscribe((data:any)=>{
-    //     console.log("data: ", data)
-    //   },
-    //   (error)=>{
-    //     console.log("error: ", error)
-    //   })
-    // }
+    AprobarSol(_id:string){
+      console.log('aprobar solicitud: ', this.idSol)
+      // this.conectS.AprobarSolicitud(this.idSol).subscribe((data)=>{
+      //   console.log("data: ", data)
+      // },
+      // (error)=>{
+      //   console.log("error: ", error)
+      // })
+    }
+
 
 
 

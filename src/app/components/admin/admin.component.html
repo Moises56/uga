@@ -36,22 +36,22 @@
                 <span class="tooltip">Solicitudes</span>
             </li>
             <li>
-                <a href="#" onclick="msjDestacados()">
+                <a (click)="solaprobada()">
                     <!-- <i class='bx bx-star'></i> -->
                     <i class="bx bx-analyse"></i>
-                    <span class="links-name">Asignadas</span>
+                    <span class="links-name">Aprobadas</span>
                 </a>
-                <span class="tooltip">Asignadas</span>
+                <span class="tooltip">Aprobadas</span>
             </li>
             <li>
-                <a href="#" onclick="msjSpan()">
+                <a onclick="msjSpan()">
                     <i class="bx bx-star"></i>
                     <span class="links-name">Pendientes</span>
                 </a>
                 <span class="tooltip">Pendientes</span>
             </li>
             <li>
-                <a href="#" onclick="msjPapelera()">
+                <a onclick="msjPapelera()">
                     <i class='bx bx-trash'></i>
                     <!-- <i class="far fa-trash-alt"></i> -->
                     <span class="links-name">Papelera</span>
@@ -95,6 +95,16 @@
                 <app-solicitud></app-solicitud>
               </div>
             </div>
+
+            <!-- SolaprobadaComponent -->
+            <div [ngClass]="{'visible':regionVisible == 'solaprobada', 'no-visible':regionVisible != 'solaprobada'}">
+              <div>
+                <app-solaprobada></app-solaprobada>
+              </div>
+            </div>
+
+
+
 
           </div>
 

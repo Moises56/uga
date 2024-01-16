@@ -11,8 +11,9 @@ export class ConectService {
 
   constructor(private http:HttpClient) { }
 
-  private URLDES = 'http://localhost:3000';
+  // private URLDES = 'http://localhost:3000';
   private URLPROD = 'https://ugapro-production.up.railway.app';
+  // private URLPROD = 'http://localhost:3000';
 
   // this.URLDES + `/${data.idUser}/orden`
 

@@ -5,6 +5,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/user/user.component';
 import { SolicitudComponent } from './components/solicitud/solicitud.component';
+import { SolaprobadaComponent } from './components/solaprobada/solaprobada.component';
 
 export const routes: Routes = [
   // { path: '', redirectTo: '/inicio', pathMatch: 'full'},
@@ -13,5 +14,7 @@ export const routes: Routes = [
   { path: 'registro', title:'registro', component: RegistroComponent},
   { path: 'admin', title: 'admin', component: AdminComponent},
   { path: 'user', title: 'user', component: UserComponent},
-  { path: 'solicitud', title: 'solicitud', component: SolicitudComponent}
+  { path: 'solicitud', title: 'solicitud', component: SolicitudComponent},
+  { path: 'solaprobada', title: 'solaprobada', component: SolaprobadaComponent}
+
 ];
